@@ -1,11 +1,11 @@
-uuid: 335a316a-5252-419a-a218-3fce49690c67
-name: 'Drush Lite'
+uuid: 95ab4cfb-568a-4f9f-833c-dfb91c363b15
+name: 'Drupal Lite'
 mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /user/login
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

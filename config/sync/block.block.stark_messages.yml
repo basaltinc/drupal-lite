@@ -1,15 +1,15 @@
-uuid: cb2ab362-f88d-4871-b7e0-7fef2b28b4f6
+uuid: 532ce5d6-13df-4f0c-adef-c816a1fd80ed
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - stark
 _core:
   default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
-id: bartik_messages
-theme: bartik
+id: stark_messages
+theme: stark
 region: highlighted
 weight: 0
 provider: null
