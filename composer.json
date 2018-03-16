@@ -35,7 +35,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "process-timeout": 0
   },
   "autoload": {
     "classmap": [
@@ -44,12 +45,21 @@
   },
   "scripts": {
     "build": [
-      "drush site-install --verbose config_installer config_installer_sync_configure_form.sync_directory=../config/sync --account-name=admin --account-pass=admin --yes",
-      "drush cache:rebuild"
-    ],
-    "rebuild": [
       "drush sql-drop -y",
-      "composer run build"
+      "drush site-install --verbose config_installer config_installer_sync_configure_form.sync_directory=../config/sync --account-name=admin --account-pass=admin --yes",
+      "drush cache:rebuild",
+      "@generate",
+      "echo '' && echo 'All done. Login with user: admin pass:admin'"
+    ],
+    "serve": "drush serve",
+    "export": "drush config:export",
+    "generate": [
+      "# 'About to use devel to generate content, but it outputs a big confusing error that actually is not an error as it still generates all the content, so we will redirect it to /dev/null to hide output.'",
+      "drush devel-generate-content --kill > /dev/null 2>&1"
+    ],
+    "start": [
+      "@build",
+      "@serve"
     ],
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
     "pre-install-cmd": [
