@@ -1,12 +1,11 @@
 {
-  "name": "drupal-composer/drupal-project",
-  "description": "Project template for Drupal 8 projects with composer",
+  "name": "basaltinc/drupal-lite",
+  "description": "Project template for a simple Drupal 8 using SQLite for easy dev testing.",
   "type": "project",
   "license": "GPL-2.0-or-later",
   "authors": [
     {
-      "name": "",
-      "role": ""
+      "name": "Evan Lovely"
     }
   ],
   "repositories": [
